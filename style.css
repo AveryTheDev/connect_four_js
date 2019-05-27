@@ -1,0 +1,26 @@
+.board {
+    display:grid;
+
+    grid-template-columns: repeat(6, 1fr);
+    background-color: #0087CA;
+    height: 50vh;
+    width: 70vw;
+}
+
+.coinSlot {
+    height: 75vh;
+    width: 8vw;    
+}
+
+.center {
+    display:flex;
+    justify-content: center;
+}
+
+li {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8vw;
+}

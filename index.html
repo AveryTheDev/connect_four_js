@@ -4,21 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Connect Four</title>
 </head>
 <body>
-    <div>
-        <div class="status">
-
-        </div>
-        <div class="board">
-
-        </div>
-        <div class="reset">
-
+    <section class="hero is-primary">
+    <div class="hero-body">
+        <div class="status container">
+            <h1 class="title">
+                Connect Four
+            </h1>
+            <h2 class="subtitle">
+                Player One: Please Select a Row to Start
+            </h2>
         </div>
     </div>
+    </section>
+    <section class="section center">
+        <div class="board">
+            <ul class="coinSlot" id="1">
+                <li id = "1">0</li>
+                <li id = "2">0</li>
+                <li id = "3">0</li>
+                <li id = "4">0</li>
+                <li id = "5">0</li>
+                <li id = "6">0</li>
+                <li id = "7">0</li>
+            </ul>
+            <ul class="coinSlot" id="2">
+                <li id = "1">0</li>
+                <li id = "2">0</li>
+                <li id = "3">0</li>
+                <li id = "4">0</li>
+                <li id = "5">0</li>
+                <li id = "6">0</li>
+                <li id = "7">0</li>
+            </ul>
+            <ul class="coinSlot" id="3">
+                <li id = "1">0</li>
+                <li id = "2">0</li>
+                <li id = "3">0</li>
+                <li id = "4">0</li>
+                <li id = "5">0</li>
+                <li id = "6">0</li>
+                <li id = "7">0</li>
+            </ul>
+            <ul class="coinSlot" id="4">
+                <li id = "1">0</li>
+                <li id = "2">0</li>
+                <li id = "3">0</li>
+                <li id = "4">0</li>
+                <li id = "5">0</li>
+                <li id = "6">0</li>
+                <li id = "7">0</li>
+            </ul>
+            <ul class="coinSlot" id="5">
+                <li id = "1">0</li>
+                <li id = "2">0</li>
+                <li id = "3">0</li>
+                <li id = "4">0</li>
+                <li id = "5">0</li>
+                <li id = "6">0</li>
+                <li id = "7">0</li>
+            </ul>
+            <ul class="coinSlot" id="6">
+                <li id = "1">0</li>
+                <li id = "2">0</li>
+                <li id = "3">0</li>
+                <li id = "4">0</li>
+                <li id = "5">0</li>
+                <li id = "6">0</li>
+                <li id = "7">0</li>
+            </ul>
+        </div>
+    </section>
+    <section class="section center">
+        <div class="reset">
+            <button class="button is-warning">Reset Game</button>
+        </div>
+    </section>   
     <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
