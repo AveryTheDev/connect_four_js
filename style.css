@@ -1,16 +1,16 @@
 .board {
     display:grid;
-
+    grid-template-rows: auto;
     grid-template-columns: repeat(6, 1fr);
     background-color: #0087CA;
-    height: 50vh;
+    height: 40em;
     width: 70vw;
 }
 
 .coinSlot {
     position: relative;
-    height: 40vh;
-    width: 4vw;    
+    height: 90%;
+    align-self: center;
 }
 
 .center {
@@ -23,12 +23,12 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 4vw;
 }
 
 .template {
     height: 4em;
     width: 4em;
+    margin-bottom: 1em;
     border-radius: 50%;
     background-color: white;
 }

@@ -29,12 +29,12 @@ let playerTurn = 1;
 let win = false;
 
 const slotSelected = (event) => {
-    debugger;
     let columnNumber = (event);
     columnNumber--;
     let slot = 0;
     let counter = 1;
 
+    if(gameMatrix[columnNumber][6] > 0) return;
 
     for(let i = 0; i < 6; i++) {
             if(i === columnNumber ) {
@@ -55,9 +55,7 @@ const slotSelected = (event) => {
                 }
             }
         }
-    }
-
-
+    } 
 
     event = event.toString();
     slot = slot + 1;
@@ -77,8 +75,11 @@ const slotSelected = (event) => {
 }
 
 const gameStatusChange = () => {
+    debugger;
     let status = document.querySelector('h2');
-
+    if (playerTurn > 42 && !win) {
+        return status.innerText = "Its A Tie!?! Reset For a Tie Breaker!"
+    }
     if (playerTurn % 2 === 1 && !win ) {
         return status.innerText = "Player One: Please Select a Column"
     }
@@ -90,9 +91,6 @@ const gameStatusChange = () => {
     }
     if (playerTurn % 2 === 0 && win ) {
         return status.innerText = "Player Two is the Winner!"
-    }
-    if (playerTurn === 42 && !win) {
-        return status.innerText = "Tie"
     }
 }
 
