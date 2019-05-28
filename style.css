@@ -40,3 +40,41 @@ li {
 .playerTwo {
     background-color: #FDFF00;
 }
+
+@media (min-width: 375px) and (max-width: 649px) {
+  .board {
+   display:grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(6, 1fr);
+    background-color: #0087CA;
+    height: 500px;
+    width: 350px;
+  }
+
+  .template {
+      height: 40px;
+      width: 40px;
+      margin-bottom: 20px;
+      border-radius: 50%;
+      background-color: white;
+  }
+}
+
+@media only screen and (max-width: 374px) {
+  .board {
+   display:grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(6, 1fr);
+    background-color: #0087CA;
+    height: 400px;
+    width: 300px;
+  }
+
+  .template {
+      height: 30px;
+      width: 30px;
+      margin-bottom: 15px;
+      border-radius: 50%;
+      background-color: white;
+  }
+}
