@@ -32,7 +32,7 @@ const slotSelected = (event) => {
     debugger;
     let columnNumber = (event);
     columnNumber--;
-    let slot;
+    let slot = 0;
 
     for(let i = 0; i < 6; i++) {
         if(i === columnNumber) {
@@ -52,44 +52,44 @@ const slotSelected = (event) => {
               break;
             }
         }
+        break;
     }
 
     event = event.toString();
+    slot = slot + 1;
     slot = slot.toString();
+
     let location = event + "-" + slot;
     let row = document.getElementById(location);
 
     if(playerTurn % 2 === 1) {
-        row.className += "playerOne";
+        row.style.cssText = "background-color: #F54C50";
     }
     if(playerTurn % 2 === 0) {
-        row.className += "playerTwo";
+        row.style.cssText = "background-color: #FDFF00";
     }
 
     playerTurn++;
 }
 
 const gameStatusChange = () => {
-    debugger;
-    let status = document.getElementsByClassName("subtitle").textContent;
+    let status = document.querySelector('h2');
 
     if (playerTurn % 2 === 1 && !win ) {
-        status = "Player One: Please Select a Column"
+        return status.innerText = "Player One: Please Select a Column"
     }
     if (playerTurn % 2 === 1 && win ) {
-        status = "Player One is the Winner!"
+        return status.innerText = "Player One is the Winner!"
     }
     if (playerTurn % 2 === 0 && !win ) {
-        status = "Player Two: Please Select a Column"
+        return status.innerText = "Player Two: Please Select a Column"
     }
     if (playerTurn % 2 === 0 && win ) {
-        status = "Player Two is the Winner!"
+        return status.innerText = "Player Two is the Winner!"
     }
     if (playerTurn === 42 && !win) {
-        status = "Tie"
+        return status.innerText = "Tie"
     }
-
-    return status;
 }
 
 const resetGame = () => {
@@ -152,4 +152,4 @@ const row = document.getElementsByTagName("ul");
         gameStatusChange();
     })
 
-// resetButton.addEventListener("click", resetGame);
+resetButton.addEventListener("click", () => resetGame);

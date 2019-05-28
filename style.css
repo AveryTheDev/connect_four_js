@@ -8,8 +8,9 @@
 }
 
 .coinSlot {
-    height: 75vh;
-    width: 8vw;    
+    position: relative;
+    height: 40vh;
+    width: 4vw;    
 }
 
 .center {
@@ -22,5 +23,20 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 8vw;
+    width: 4vw;
+}
+
+.template {
+    height: 4em;
+    width: 4em;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.playerOne {
+    background-color: #F54C50;
+}
+
+.playerTwo {
+    background-color: #FDFF00;
 }
