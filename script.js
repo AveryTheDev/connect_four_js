@@ -47,38 +47,6 @@ const gameStatusChange = () => {
     }
 }
 
-const resetGame = () => {
-    debugger;
-    gameMatrix = [
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0]
-    ];
-
-    playerOneSlots = [
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0]
-    ];
-
-    playerTwoSlots = [
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0]
-    ]; 
-
-    playerTurn = 1;
-}
-
 function checkForMatch(a, b, c, d) {
   return ((a != 0) && (a == b) && (a == c) && (a == d));
 }
@@ -163,7 +131,6 @@ const slotSelected = (event) => {
 
 }
 
-const resetButton = document.getElementsByClassName("button");
 const row = document.getElementsByTagName("ul");
 
 row[0].addEventListener("click", (event) => {
@@ -208,4 +175,3 @@ row[5].addEventListener("click", (event) => {
     gameStatusChange();
 })
 
-resetButton.addEventListener("click", () => resetGame);
