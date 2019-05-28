@@ -33,27 +33,31 @@ const slotSelected = (event) => {
     let columnNumber = (event);
     columnNumber--;
     let slot = 0;
+    let counter = 1;
+
 
     for(let i = 0; i < 6; i++) {
-        if(i === columnNumber) {
-            for(let j = 0; j < 7; j++) {
-              if(gameMatrix[i][j] === 0) {
-                  gameMatrix[i][j] = playerTurn % 2 === 1 ? 1 : 2;
-                  console.log(gameMatrix[i][j]);
-                   slot = j;
-                  if (playerTurn % 2 === 1) {
-                      playerOneSlots[i][j] = 1;
-                      console.log(playerOneSlots[i][j]);
-                  }
-                  else if (playerTurn % 2 === 0) {
-                      playerTwoSlots[i][j] = 2;                    
-                  }
-              }
-              break;
+            if(i === columnNumber ) {
+                for(let j = 0; j < 7; j++) {
+                if(gameMatrix[i][j] === 0 && counter !==0) {
+                    gameMatrix[i][j] = playerTurn % 2 === 1 ? 1 : 2;
+                    console.log(gameMatrix[i][j]);
+                    slot = j;
+                    if (playerTurn % 2 === 1) {
+                        playerOneSlots[i][j] = 1;
+                        console.log(playerOneSlots[i][j]);
+                        counter--;
+                    }
+                    else if (playerTurn % 2 === 0) {
+                        playerTwoSlots[i][j] = 2;  
+                        counter--;                  
+                    }
+                }
             }
         }
-        break;
     }
+
+
 
     event = event.toString();
     slot = slot + 1;
@@ -128,27 +132,39 @@ const resetButton = document.getElementsByClassName("button");
 const row = document.getElementsByTagName("ul");
 
     row[0].addEventListener("click", (event) => {
+        if(playerTurn < 43) {
         slotSelected(event.currentTarget.id);
+        }
         gameStatusChange();
     })
     row[1].addEventListener("click", (event) => {
+        if(playerTurn < 43) {
         slotSelected(event.currentTarget.id);
+        }
         gameStatusChange();
     })
     row[2].addEventListener("click", (event) => {
+        if(playerTurn < 43) {
         slotSelected(event.currentTarget.id);
+        }
         gameStatusChange();
     })
     row[3].addEventListener("click", (event) => {
+        if(playerTurn < 43) {
         slotSelected(event.currentTarget.id);
+        }
         gameStatusChange();
     })
     row[4].addEventListener("click", (event) => {
+        if(playerTurn < 43) {
         slotSelected(event.currentTarget.id);
+        }
         gameStatusChange();
     })
     row[5].addEventListener("click", (event) => {
-        slotSelected(event.currentTarget.id);
+        if(playerTurn < 43) {
+            slotSelected(event.currentTarget.id);
+        }
         gameStatusChange();
     })
 
