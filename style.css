@@ -1,10 +1,10 @@
 .board {
     display:grid;
     grid-template-rows: auto;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(7, 1fr);
     background-color: #0087CA;
-    height: 40em;
-    width: 70vw;
+    height: 35rem;
+    width: 40rem;
 }
 
 .coinSlot {
@@ -41,13 +41,13 @@ li {
     background-color: #FDFF00;
 }
 
-@media (min-width: 375px) and (max-width: 649px) {
+@media (min-width: 375px) and (max-width: 425px) {
   .board {
    display:grid;
     grid-template-rows: auto;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(7, 1fr);
     background-color: #0087CA;
-    height: 500px;
+    height: 400px;
     width: 350px;
   }
 
@@ -64,15 +64,15 @@ li {
   .board {
    display:grid;
     grid-template-rows: auto;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(7, 1fr);
     background-color: #0087CA;
-    height: 400px;
+    height: 270px;
     width: 300px;
   }
 
   .template {
-      height: 30px;
-      width: 30px;
+      height: 25px;
+      width: 25px;
       margin-bottom: 15px;
       border-radius: 50%;
       background-color: white;
