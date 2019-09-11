@@ -11,6 +11,6 @@ Features
   + Player Turns Alternates
   + Game Stops When Four Tiles Align In Same Color (Places By Same Player)
   + Checks For And Announces Winner
-* Nav Bar With Announcement Based Off Of State Of Game
+* Top Bar Provides Announcements Based Off Of State Of Game
 * Reset Button To Enable A New Game
 * Responsive Web App, Enabling Mobile Playing
